@@ -16,11 +16,6 @@ const SkillsList = () => {
       color: "bg-green-500",
     },
     {
-      name: "React Native",
-      icon: "nodejs",
-      color: "bg-green-500",
-    },
-    {
       name: "Vue.js",
       icon: "nodejs",
       color: "bg-green-500",
@@ -51,6 +46,11 @@ const SkillsList = () => {
       color: "bg-green-500",
     },
     {
+      name: "PostgreSQL",
+      icon: "mongodb",
+      color: "bg-green-500",
+    },
+    {
       name: "GraphQL",
       icon: "graphql",
       color: "bg-pink-500",
@@ -66,6 +66,17 @@ const SkillsList = () => {
       color: "bg-blue-500",
     },
     {
+      name: "Solidity",
+      icon: "github",
+      color: "bg-black",
+    },
+    {
+      name: "Web3",
+      icon: "github",
+      color: "bg-black",
+    },
+
+    {
       name: "AWS",
       icon: "aws",
       color: "bg-yellow-500",
@@ -76,22 +87,22 @@ const SkillsList = () => {
       color: "bg-blue-500",
     },
     {
-      name: "Vercel",
+      name: "Web Performance",
       icon: "vercel",
       color: "bg-black",
     },
     {
-      name: "Heroku",
+      name: "LLM",
       icon: "heroku",
       color: "bg-purple-500",
     },
     {
-      name: "Git",
-      icon: "git",
-      color: "bg-red-500",
+      name: "Data Science",
+      icon: "github",
+      color: "bg-black",
     },
     {
-      name: "GitHub",
+      name: "Agile Project Management",
       icon: "github",
       color: "bg-black",
     },

@@ -17,7 +17,7 @@ const ProjectCard = ({ project }: { project: IProjectCard }) => {
     );
   };
   return (
-    <div className="flex flex-col border border-gray-100 rounded-lg  justify-between">
+    <div className="flex flex-col border border-gray-100 dark:border-gray-600 rounded-lg justify-between">
       <div className="flex justify-center py-2">
         {project.type === "phone"
           ? phone({ v: project.video })
