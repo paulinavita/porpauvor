@@ -13,9 +13,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Paufavor",
-  description: "paulina davita portfolio and some dev things",
+export const metadata = {
+  title: "Porpauvor;",
+  description: "paupau portfolio and some dev things",
+  icons: {
+    icon: "img/favicon.ico",
+    shortcut: "img/favicon.ico",
+    apple: "img/apple-touch-icon.png", // iOS devices
+  },
 };
 
 export default function RootLayout({
