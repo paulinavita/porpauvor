@@ -4,7 +4,6 @@ import { cva, type VariantProps } from "class-variance-authority";
 import {
   motion,
   MotionProps,
-  MotionValue,
   useMotionValue,
   useSpring,
   useTransform,
@@ -15,17 +14,13 @@ import { cn } from "@/lib/utils";
 
 export interface DockProps extends VariantProps<typeof dockVariants> {
   className?: string;
-  iconSize?: number;
   iconMagnification?: number;
   iconDistance?: number;
-  mouseX?: any;
-  mouseY?: any;
   direction?: "top" | "middle" | "bottom";
   orientation?: "horizontal" | "vertical";
   children: React.ReactNode;
 }
 
-const DEFAULT_SIZE = 38;
 const DEFAULT_MAGNIFICATION = 47;
 const DEFAULT_DISTANCE = 130;
 
@@ -38,49 +33,15 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
     {
       className,
       children,
-      iconSize = DEFAULT_SIZE,
-      iconMagnification = DEFAULT_MAGNIFICATION,
-      iconDistance = DEFAULT_DISTANCE,
       direction = "middle",
       orientation = "horizontal",
       ...props
     },
     ref
   ) => {
-    const mouseX = useMotionValue(Infinity);
-    const mouseY = useMotionValue(Infinity);
-
-    const renderChildren = () => {
-      return React.Children.map(children, (child) => {
-        if (React.isValidElement(child) && child.type === DockIcon) {
-          return React.cloneElement(child, {
-            mouseX,
-            mouseY,
-            magnification: iconMagnification,
-            distance: iconDistance,
-          });
-        }
-        return child;
-      });
-    };
-
     return (
       <motion.div
         ref={ref}
-        onMouseMove={(e) => {
-          if (orientation == "horizontal") {
-            mouseX.set(e.clientX);
-          } else {
-            mouseY.set(e.clientY);
-          }
-        }}
-        onMouseLeave={() => {
-          if (orientation == "horizontal") {
-            mouseX.set(Infinity);
-          } else {
-            mouseY.set(Infinity);
-          }
-        }}
         {...props}
         className={cn(dockVariants({ className }), {
           "items-start": direction === "top",
@@ -90,7 +51,7 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
           "flex-row": orientation === "horizontal",
         })}
       >
-        {renderChildren()}
+        {children}
       </motion.div>
     );
   }
@@ -100,37 +61,33 @@ Dock.displayName = "Dock";
 
 export interface DockIconProps
   extends Omit<MotionProps & React.HTMLAttributes<HTMLDivElement>, "children"> {
-  size?: number;
   magnification?: number;
   distance?: number;
-  mouseX?: MotionValue<number>;
   className?: string;
   children?: React.ReactNode;
   props?: PropsWithChildren;
-  orientation?: "horizontal" | "vertical";
 }
 
 const DockIcon = ({
-  size = DEFAULT_SIZE,
-  magnification = DEFAULT_MAGNIFICATION,
   distance = DEFAULT_DISTANCE,
-  mouseX,
-  mouseY,
   className,
   children,
+  magnification = DEFAULT_MAGNIFICATION,
   ...props
 }: DockIconProps) => {
   const ref = useRef<HTMLDivElement>(null);
 
+  // Create independent mouse tracking for each DockIcon
+  const mouseX = useMotionValue<number>(Infinity);
+  const mouseY = useMotionValue<number>(Infinity);
+
   const distanceHeightCalc = useTransform(mouseY, (val: number) => {
     const bounds = ref.current?.getBoundingClientRect() ?? { y: 0, height: 0 };
-
     return val - bounds.y - bounds.height / 2;
   });
 
   const distanceWidthCalc = useTransform(mouseX, (val: number) => {
     const bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
-
     return val - bounds.x - bounds.width / 2;
   });
 
@@ -139,7 +96,6 @@ const DockIcon = ({
     [-distance, 0, distance],
     [40, magnification, 40]
   );
-
   const widthSync = useTransform(
     distanceWidthCalc,
     [-distance, 0, distance],
@@ -151,7 +107,6 @@ const DockIcon = ({
     stiffness: 150,
     damping: 12,
   });
-
   const width = useSpring(widthSync, {
     mass: 0.1,
     stiffness: 150,
@@ -161,6 +116,14 @@ const DockIcon = ({
   return (
     <motion.div
       ref={ref}
+      onMouseMove={(e) => {
+        mouseX.set(e.clientX);
+        mouseY.set(e.clientY);
+      }}
+      onMouseLeave={() => {
+        mouseX.set(Infinity);
+        mouseY.set(Infinity);
+      }}
       style={{ width, height }}
       className={cn(
         "flex aspect-square cursor-pointer items-center justify-center rounded-full",

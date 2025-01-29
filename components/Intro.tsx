@@ -30,7 +30,8 @@ const Intro = () => {
             site is on a bit progress, i will add more of my dev works soon!
           </div>
           <div className="text-xs flex md:mt-8 sm:mt-4 lg:mt-0">
-            um, this is not my tarot booking commerce web but it's on the way!
+            um, this is not my tarot booking commerce web but it&apos;s on the
+            way!
           </div>
         </div>
         <div className="flex items-center justify-center md:mb-0">

@@ -122,9 +122,8 @@ const DATA = {
   },
 };
 
-export function CustomDock({
-  orientation,
-}: {
+export function CustomDock({}: // orientation,
+{
   orientation: "horizontal" | "vertical";
 }) {
   const { resolvedTheme, setTheme } = useTheme();
