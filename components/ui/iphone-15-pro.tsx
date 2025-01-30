@@ -66,14 +66,14 @@ export default function Iphone15Pro({
           href={src}
           x="21.25"
           y="19.25"
-          width="389.5"
-          height="843.5"
+          width={width}
+          height={height}
           preserveAspectRatio="xMidYMid slice"
           clipPath="url(#roundedCorners)"
         />
       )}
       {videoSrc && (
-        <foreignObject x="21.25" y="19.25" width="389.5" height="843.5">
+        <foreignObject x="21.25" y="19.25" width={width} height={height}>
           <video
             className="size-full overflow-hidden rounded-[55.75px] object-cover"
             src={videoSrc}
