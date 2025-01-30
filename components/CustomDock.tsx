@@ -89,10 +89,11 @@ const Icons = {
 
 const DATA = {
   navbar: [
-    { href: "#", icon: HomeIcon, label: "Home" },
+    { href: "/", icon: HomeIcon, label: "Home", openInNewTab: false },
     {
       href: "https://paulinavita.medium.com/",
       icon: PencilIcon,
+      openInNewTab: true,
       label: "Blog",
     },
   ],
@@ -102,19 +103,23 @@ const DATA = {
         name: "GitHub",
         url: "https://github.com/paulinavita",
         icon: Icons.github,
+        openInNewTab: true,
       },
       LinkedIn: {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/paulinalydwinedavita/",
         icon: Icons.linkedin,
+        openInNewTab: true,
       },
       Instagram: {
         name: "Instagram",
         url: "https://instagram.com/paulydvne",
+        openInNewTab: true,
         icon: Icons.ig,
       },
       Email: {
         name: "Mail Me!",
+        openInNewTab: true,
         url: "mailto:paulinalyddavita@gmail.com",
         icon: Icons.email,
       },
@@ -158,7 +163,7 @@ export function CustomDock({}: // orientation,
                   <Link
                     href={item.href}
                     aria-label={item.label}
-                    target="_blank"
+                    target={item.openInNewTab ? "_blank" : "_self"}
                     rel="noopener noreferrer"
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),

@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    domains: [
+      "flowbite.s3.amazonaws.com",
+      "prod-files-secure.s3.us-west-2.amazonaws.com",
+    ], // Add the hostname here
+  },
 };
 
 export default nextConfig;
