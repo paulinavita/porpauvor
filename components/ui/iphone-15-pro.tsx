@@ -73,9 +73,16 @@ export default function Iphone15Pro({
         />
       )}
       {videoSrc && (
-        <foreignObject x="21.25" y="19.25" width={width} height={height}>
+        <foreignObject
+          x="21.25"
+          y="19.25"
+          width={width}
+          height={height}
+          clipPath="url(#roundedCorners)" // Explicitly clip
+        >
           <video
             className="size-full overflow-hidden rounded-[55.75px] object-cover"
+            style={{ width: "100%", height: "100%", borderRadius: "55.75px" }} // Ensure proper scaling
             src={videoSrc}
             autoPlay
             loop
