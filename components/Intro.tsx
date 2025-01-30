@@ -29,10 +29,12 @@ const Intro = () => {
           <div className="flex md:mt-8 sm:mt-4 lg:mt-0">
             site is on a bit progress, i will add more of my dev works soon!
           </div>
-          {/* <div className="text-xs flex md:mt-8 sm:mt-4 lg:mt-0">
-            um, this is not my tarot booking commerce web but it&apos;s on the
-            way!
-          </div> */}
+          <span className="text-xs md:mt-3 sm:mt-4 lg:mt-0">
+            the sitename porpauvor derives from{" "}
+            <span className="italic">por favor</span>, spanish for{" "}
+            <span className="italic">please</span>. just a wordplay for not
+            using my whole fullname for a website 🙃 🪄
+          </span>
         </div>
         <div className="flex items-center justify-center md:mb-0">
           <Image src="/pau.svg" alt="hero" width={200} height={200} />
