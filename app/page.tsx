@@ -7,6 +7,7 @@ import ProjectList from "@/components/ProjectList";
 import { CustomDock } from "@/components/CustomDock";
 import Research from "@/components/Research";
 import Btn from "./components/photoblog/Btn";
+import OtherExperience from "@/components/Others";
 export default function Home() {
   return (
     <div className="relative w-8/12 mx-auto items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] overflow-hidden">
@@ -21,6 +22,7 @@ export default function Home() {
         <ProjectList />
         <Research />
         <WorkExperience />
+        <OtherExperience />
         {/* <Edu /> */}
         <CustomDock orientation="vertical" />
       </main>
