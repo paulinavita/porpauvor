@@ -6,7 +6,6 @@ import SkillsList from "@/components/SkillsList";
 import ProjectList from "@/components/ProjectList";
 import { CustomDock } from "@/components/CustomDock";
 import Research from "@/components/Research";
-import Link from "next/link";
 import Btn from "./components/photoblog/Btn";
 export default function Home() {
   return (

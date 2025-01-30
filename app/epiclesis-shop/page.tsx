@@ -2,7 +2,7 @@ import React from "react";
 import { TypingAnimation } from "../../components/ui/typing-animation";
 import Link from "next/link";
 
-export function LoadingPage() {
+export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-white dark:bg-gray-900 font-[family-name:var(--font-geist-sans)]">
       <div className="text-center space-y-4">
@@ -22,5 +22,3 @@ export function LoadingPage() {
     </div>
   );
 }
-
-export default LoadingPage;

@@ -1,25 +1,21 @@
 import Image from "next/image";
-import {
-  getPageContent,
-  getPageBySlug,
-  notionClient,
-  getPages,
-} from "@/lib/utils/notion";
+import { getPages } from "@/lib/utils/notion";
+import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
-// Function to extract image URLs from Notion pages
-const extractImages = (pages) => {
+const extractImages = (pages: []) => {
   return pages
-    .map((page) => {
-      // Assuming images are in `cover` or a `files` property
-      if (page.cover && page.cover.file) {
-        return page.cover.file.url;
-      } else if (page.cover && page.cover.external) {
-        return page.cover.external.url;
-      } else if (
-        page.properties.image &&
-        page.properties.image.files?.length > 0
+    .map((page: PageObjectResponse) => {
+      const imageProperty = page.properties.image;
+      if (
+        imageProperty &&
+        "files" in imageProperty &&
+        imageProperty.files?.length > 0
       ) {
-        return page.properties.image.files[0].file.url; // Adjust if multiple files exist
+        const file = imageProperty.files[0];
+        if ("file" in file) {
+          return file.file.url;
+        }
+        return null;
       }
       return null;
     })
@@ -28,11 +24,14 @@ const extractImages = (pages) => {
 
 export default async function Photoblog() {
   const notionData = await getPages(); // Fetch Notion data
-  const images = extractImages(notionData.results || []); // Extract images
+
+  // @ts-expect-error expect missing definition from notion api, tbu
+  const images = extractImages(notionData.results || []);
 
   // Organise images into 3 columns for grid layout
   const columns = [[], [], []]; // 3 columns for lg screens
   images.forEach((src, index) => {
+    // @ts-expect-error expect missing definition from notion api, tbu
     columns[index % 3].push(src); // Distribute images across columns
   });
 
