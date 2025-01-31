@@ -4,7 +4,7 @@ import Safari from "./ui/safari";
 
 const ProjectCard = ({ project }: { project: IProjectCard }) => {
   const phone = ({ v }: { v: string }) => {
-    return <Iphone15Pro scale={0.44} videoSrc={v} />;
+    return <Iphone15Pro scale={0.44} src={v} />;
   };
   const desktop = ({ v }: { v: string }) => {
     return (
@@ -17,11 +17,11 @@ const ProjectCard = ({ project }: { project: IProjectCard }) => {
     );
   };
   return (
-    <div className="flex flex-col border border-gray-100 dark:border-gray-600 rounded-lg justify-between">
-      <div className="flex justify-center py-2">
+    <div className="relative flex flex-col border border-gray-100 dark:border-gray-600 rounded-lg justify-between">
+      <div className="relative flex justify-center py-2">
         {project.type === "phone"
-          ? phone({ v: project.video })
-          : desktop({ v: project.video })}
+          ? phone({ v: project.asset })
+          : desktop({ v: project.asset })}
       </div>
       <div className="flex flex-col gap-2 p-4 justify-between h-full">
         <h2 className="fond-bold">{project.name}</h2>

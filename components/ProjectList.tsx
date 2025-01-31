@@ -3,7 +3,7 @@ import ProjectCard from "./ProjectCard";
 export interface IProjectCard {
   name: string;
   description: string;
-  video: string;
+  asset: string;
   type: string;
   stacks: string[];
 }
@@ -16,7 +16,7 @@ const ProjectList = () => {
       link: "https://paintpro.vercel.app/",
       description:
         "An e-commerce platform specializing in the procurement and sale of paint and related building materials, designed to streamline construction operations for our clients",
-      video: "/videos/paintpro.mp4",
+      asset: "/videos/paintpro.gif",
       stacks: [
         "Next.js",
         "React",
@@ -33,7 +33,7 @@ const ProjectList = () => {
       link: "https://m.dana.id/i/biller-app/game/home",
       description:
         "A digital marketplace facilitating  secure and convenient purchase point of game vouchers and in-game items. The platform provides promotions, blogs, and game reviews.",
-      video: "/videos/game.mp4",
+      asset: "/videos/game.gif",
       stacks: ["Nuxt.js", "React.js", "TypeScript", "Tailwind CSS", "REST API"],
     },
     {
@@ -42,7 +42,7 @@ const ProjectList = () => {
       description:
         "An integrated feature within the DANA Wallet application that enables users to automate bill payments according to their preferred cyclical schedule",
       link: "https://www.dana.id/personal/lifestyle",
-      video: "/videos/recurringbill.mp4",
+      asset: "/videos/recurringbill.gif",
       stacks: ["Vue.js", "TypeScript", "Tailwind CSS", "REST API"],
     },
     {
@@ -51,7 +51,7 @@ const ProjectList = () => {
       description:
         "Compare mobile credit and data packages for all major Indonesian telcos directly within the app and make instant payments",
       link: "https://www.dana.id/personal/lifestyle",
-      video: "/videos/pulsa.mp4",
+      asset: "/videos/pulsa.gif",
       stacks: ["Vue.js", "TypeScript", "Tailwind CSS", "REST API"],
     },
   ];
@@ -63,7 +63,7 @@ const ProjectList = () => {
       description:
         "A social e-Commerce service that encourages users to buy stuff collectively with another user for reduced price",
       link: "https://danaventures.id/works/BoraBora",
-      video: "/img/bora.png",
+      asset: "/img/bora.png",
       stacks: ["Flutter", "Firebase", "Bloc / Cubit", "CodeMagic", "REST API"],
     },
     {
@@ -72,7 +72,7 @@ const ProjectList = () => {
       description:
         "A specialized marketplace and service offering commissioned hand-carry items acquired from overseas or certain areas.",
       link: "https://www.openjustip.id/",
-      video: "/img/jt.png",
+      asset: "/img/jt.png",
       stacks: [
         "React Native",
         "TypeScript",

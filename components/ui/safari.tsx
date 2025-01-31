@@ -22,6 +22,7 @@ export default function Safari({
 }: SafariProps) {
   return (
     <svg
+      className="relative"
       width={width}
       height={height}
       viewBox={`0 0 ${width} ${height}`}
@@ -152,8 +153,8 @@ export default function Safari({
           <foreignObject
             x="1"
             y="52"
-            width="1200"
-            height="700"
+            width={width}
+            height={height}
             preserveAspectRatio="xMidYMid slice"
             clipPath="url(#roundedBottom)"
           >
