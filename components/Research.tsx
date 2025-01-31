@@ -11,17 +11,16 @@ const resData = [
     url: "https://drive.google.com/file/d/1yx9QOw-tMiO90Cvszi1H2khScc_YGSOo/view?usp=sharing",
   },
 ];
+
 const Research: React.FC = () => {
   return (
-    <div>
-      <div className="py-2">
-        <h2 className="text-xl font-bold">Academic Writings</h2>
-      </div>
-      <ul className="max-w-md divide-y divide-gray-200 dark:divide-gray-700">
+    <div className="w-full max-w-md mx-auto">
+      <h2 className="text-xl font-bold w-full pb-2">Academic Writings</h2>
+      <ul className="border-s border-gray-200 dark:border-gray-700 w-full">
         {resData.map((item, index) => (
-          <li key={index} className="py-2">
-            <div className="flex items-center space-x-4 rtl:space-x-reverse">
-              <div className="flex-shrink-0">
+          <li key={index} className="py-2 w-full">
+            <div className="flex items-center space-x-2 rtl:space-x-reverse w-full">
+              <div className="flex-shrink-0 pl-2">
                 <Link href={item.url} target="_blank" rel="noopener noreferrer">
                   <span>
                     <svg
@@ -45,7 +44,7 @@ const Research: React.FC = () => {
                 </Link>
               </div>
               <div className="flex-1 min-w-0">
-                <span className="text-md font-medium text-gray-800 dark:text-white truncate">
+                <span className="text-md font-medium text-gray-800 dark:text-white truncate block w-full overflow-hidden text-ellipsis whitespace-nowrap">
                   {item.title}
                 </span>
               </div>

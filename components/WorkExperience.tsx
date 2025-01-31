@@ -79,7 +79,7 @@ const WorkExperience = () => {
               <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
                 {item.startDate} - {item.endDate || "Present"}
               </time>
-              <h3 className="text-md font-medium text-gray-900 dark:text-white">
+              <h3 className="text-md sm:text-sm font-medium text-gray-900 dark:text-white">
                 {item.jobTitle} at {item.companyName}
               </h3>
               <button

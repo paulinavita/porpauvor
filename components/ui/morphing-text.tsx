@@ -135,7 +135,7 @@ const SvgFilters: React.FC = () => (
 const MorphingText: React.FC<MorphingTextProps & { size?: string }> = ({
   texts,
   className,
-  size = "sm:text-2xl md:text-3xl lg:text-4xl",
+  size = "sm:text-3xl md:text-3xl lg:text-4xl",
 }) => (
   <div
     className={cn(

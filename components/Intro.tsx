@@ -19,17 +19,17 @@ const Intro = () => {
               it&apos;s <b>paulina ❀</b> here. i do{" "}
             </span>
           </div>
-          <div className="relative flex gap-10 bg-blue-500 block lg:left-44 md:h-100 lg:bottom-12">
+          <div className="relative flex gap-10 bg-blue-500 block lg:left-44 md:h-100 lg:bottom-12 ">
             <MorphingText className="absolute" texts={texts} />
           </div>
-          <div className="flex md:mt-8 sm:mt-4 lg:mt-0">
+          <div className="flex md:mt-8 sm:mt-8 lg:mt-0">
             dev things; most that makes me happy. sugar & 🍒 on top would be
             productivity, blockchain, and bits of data analysis.
           </div>
-          <div className="flex md:mt-8 sm:mt-4 lg:mt-0">
+          <div className="flex md:mt-8 sm:mt-1 lg:mt-0">
             site is on a bit progress, i will add more of my dev works soon!
           </div>
-          <span className="text-xs md:mt-3 sm:mt-4 lg:mt-0">
+          <span className="text-xs md:mt-3 sm:mt-1 lg:mt-0">
             the sitename porpauvor derives from{" "}
             <span className="italic">por favor</span>, spanish for{" "}
             <span className="italic">please</span>. just a wordplay for not

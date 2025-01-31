@@ -10,7 +10,7 @@ import Btn from "./components/photoblog/Btn";
 import OtherExperience from "@/components/Others";
 export default function Home() {
   return (
-    <div className="relative w-8/12 mx-auto items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:py-10 sm:px-2 font-[family-name:var(--font-geist-sans)] overflow-hidden">
+    <div className="relative w-10/12 sm:w-10/12 md:w-6/12 lg:w-4/5 mx-auto flex flex-col items-center justify-center min-h-screen lg:p-8 py-10 px-4 sm:px-8 md:px-12 overflow-hidden font-[family-name:var(--font-geist-sans)] overflow-hidden">
       <main className="flex flex-col gap-4 row-start-2 items-center sm:items-start w-full overflow-hidden">
         <Meteors />
         <Intro />
