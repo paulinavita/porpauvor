@@ -9,8 +9,12 @@ export default function Home() {
         <TypingAnimation>magic&apos;s working on it..</TypingAnimation>
 
         <p className="text-sm text-gray-600 dark:text-gray-400 mt-6">
-          in the meantime you can book my tarot reading directly by dm-ing me
-          @paulydvne
+          in the meantime you can book my tarot reading (personal & events)
+          directly by dm-ing me
+          <Link href={"https://instagram.com/paulydvne"} className="bold">
+            {" "}
+            @paulydvne
+          </Link>
         </p>
         <Link
           href={"/"}
