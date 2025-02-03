@@ -14,12 +14,12 @@ const resData = [
 
 const Research: React.FC = () => {
   return (
-    <div className="w-full max-w-md mx-auto">
+    <div className="w-full max-w-md ">
       <h2 className="text-xl font-bold w-full pb-2">Academic Writings</h2>
       <ul className="border-s border-gray-200 dark:border-gray-700 w-full">
         {resData.map((item, index) => (
           <li key={index} className="py-2 w-full">
-            <div className="flex items-center space-x-2 rtl:space-x-reverse w-full">
+            <div className="flex space-x-2 rtl:space-x-reverse w-full">
               <div className="flex-shrink-0 pl-2">
                 <Link href={item.url} target="_blank" rel="noopener noreferrer">
                   <span>
@@ -44,7 +44,7 @@ const Research: React.FC = () => {
                 </Link>
               </div>
               <div className="flex-1 min-w-0">
-                <span className="text-md font-medium text-gray-800 dark:text-white truncate block w-full overflow-hidden text-ellipsis whitespace-nowrap">
+                <span className="text-md sm:text-sm font-medium text-gray-800 dark:text-white truncate block w-full overflow-hidden text-ellipsis whitespace-nowrap">
                   {item.title}
                 </span>
               </div>
