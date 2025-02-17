@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
     domains: [
       "flowbite.s3.amazonaws.com",
       "prod-files-secure.s3.us-west-2.amazonaws.com",
+      "/img.notionusercontent.com",
     ], // Add the hostname here
   },
 };
