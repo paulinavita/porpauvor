@@ -21,7 +21,12 @@ const Research: React.FC = () => {
           <li key={index} className="py-2 w-full">
             <div className="flex space-x-2 rtl:space-x-reverse w-full">
               <div className="flex-shrink-0 pl-2">
-                <Link href={item.url} target="_blank" rel="noopener noreferrer">
+                <Link
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cursor-pointer hover:underline hover:text-gray-400"
+                >
                   <span>
                     <svg
                       className="w-5 h-5 text-gray-800 dark:text-white"
@@ -44,7 +49,7 @@ const Research: React.FC = () => {
                 </Link>
               </div>
               <div className="flex-1 min-w-0">
-                <span className="text-md sm:text-sm font-medium text-gray-800 dark:text-white truncate block w-full overflow-hidden text-ellipsis whitespace-nowrap">
+                <span className="text-md sm:text-sm font-medium text-gray-800 dark:text-white truncate block w-full overflow-hidden text-ellipsis whitespace-nowrap cursor-pointer hover:underline hover:text-gray-400">
                   {item.title}
                 </span>
               </div>
