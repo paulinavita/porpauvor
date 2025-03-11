@@ -23,17 +23,17 @@ const Intro = () => {
             <MorphingText className="absolute" texts={texts} />
           </div>
           <div className="flex md:mt-8 sm:mt-8 lg:mt-0">
-            dev things; most that makes me happy. sugar & 🍒 on top would be
+            dev things; those that make me happy. sugar & 🍒 on top would be
             productivity, blockchain, and bits of data analysis.
           </div>
           <div className="flex md:mt-8 sm:mt-1 lg:mt-0">
-            site is on a bit progress, i will add more of my dev works soon!
+            site is in progress, i will add more of my dev works soon!
           </div>
           <span className="text-xs md:mt-3 sm:mt-1 lg:mt-0">
-            the sitename porpauvor derives from{" "}
+            the site&apos;s name porpauvor derives from{" "}
             <span className="italic">por favor</span>, spanish for{" "}
             <span className="italic">please</span>. just a wordplay for not
-            using my whole fullname for a website 🙃 🪄
+            using my fullname for a website 🙃 🪄
           </span>
         </div>
         <div className="flex items-center justify-center md:mb-0">
