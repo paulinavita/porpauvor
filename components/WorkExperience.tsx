@@ -14,12 +14,12 @@ interface WorkExperienceItem {
 
 const workExperienceData: WorkExperienceItem[] = [
   {
-    startDate: "2023",
-    endDate: "2023",
+    startDate: "2024",
+    endDate: "2024",
     companyName: "Quant Network, London",
     jobTitle: "Blockchain Engineer Intern",
     description: [
-      "Produced a protocol on interoperability for on-chain asset exchanges -- super determined though my bugs exploded like kraken",
+      "Produced a protocol on interoperability for on-chain asset exchanges (Paper to be published soon)",
     ],
   },
   {
@@ -27,9 +27,7 @@ const workExperienceData: WorkExperienceItem[] = [
     endDate: "2024",
     companyName: "DANA Ventures",
     jobTitle: "Fullstack Engineer",
-    description: [
-      "Developed few very cultural React Native commerce apps which have this local flavour native to Indonesian culture.",
-    ],
+    description: ["Led React Native commerce app development"],
   },
   {
     startDate: "2023",
@@ -84,7 +82,7 @@ const WorkExperience = () => {
               </h3>
               <button
                 onClick={() => toggleVisibility(index)}
-                className="text-sm text-slate-500 hover:underline"
+                className="text-xs text-slate-500 hover:underline"
               >
                 {visibleItems[index] ? "Hide details" : "Show details"}
               </button>
@@ -92,7 +90,9 @@ const WorkExperience = () => {
                 <div className="mb-4 text-base font-normal text-gray-700 dark:text-gray-400">
                   <ul>
                     {item.description.map((desc, descIndex) => (
-                      <li key={descIndex}>{desc}</li>
+                      <li className="text-xs" key={descIndex}>
+                        {desc}
+                      </li>
                     ))}
                   </ul>
                   {item.companyLink && (

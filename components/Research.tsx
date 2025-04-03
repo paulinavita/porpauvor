@@ -19,40 +19,36 @@ const Research: React.FC = () => {
       <ul className="border-s border-gray-200 dark:border-gray-700 w-full">
         {resData.map((item, index) => (
           <li key={index} className="py-2 w-full">
-            <div className="flex space-x-2 rtl:space-x-reverse w-full">
-              <div className="flex-shrink-0 pl-2">
-                <Link
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="cursor-pointer hover:underline hover:text-gray-400"
-                >
-                  <span>
-                    <svg
-                      className="w-5 h-5 text-gray-800 dark:text-white"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="32"
-                      height="32"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M13.213 9.787a3.391 3.391 0 0 0-4.795 0l-3.425 3.426a3.39 3.39 0 0 0 4.795 4.794l.321-.304m-.321-4.49a3.39 3.39 0 0 0 4.795 0l3.424-3.426a3.39 3.39 0 0 0-4.794-4.795l-1.028.961"
-                      />
-                    </svg>
-                  </span>
-                </Link>
-              </div>
-              <div className="flex-1 min-w-0">
+            <div className="">
+              <Link
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex space-x-2 rtl:space-x-reverse w-full cursor-pointer hover:underline hover:text-gray-400"
+              >
+                <span>
+                  <svg
+                    className="pl-2 w-5 h-5 text-gray-800 dark:text-white"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M13.213 9.787a3.391 3.391 0 0 0-4.795 0l-3.425 3.426a3.39 3.39 0 0 0 4.795 4.794l.321-.304m-.321-4.49a3.39 3.39 0 0 0 4.795 0l3.424-3.426a3.39 3.39 0 0 0-4.794-4.795l-1.028.961"
+                    />
+                  </svg>
+                </span>
                 <span className="text-md sm:text-sm font-medium text-gray-800 dark:text-white truncate block w-full overflow-hidden text-ellipsis whitespace-nowrap cursor-pointer hover:underline hover:text-gray-400">
                   {item.title}
                 </span>
-              </div>
+              </Link>
             </div>
           </li>
         ))}
