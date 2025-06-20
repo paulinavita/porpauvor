@@ -16,6 +16,15 @@ const workExperienceData: WorkExperienceItem[] = [
   {
     startDate: "2024",
     endDate: "2024",
+    companyName: "Tectagon Software House",
+    jobTitle: "Sr Software Engineer",
+    description: [
+      "Remote work. Lead game development project using WebSocket, Node.js, Vue.js, and Go as a frontend engineer",
+    ],
+  },
+  {
+    startDate: "2024",
+    endDate: "2024",
     companyName: "Quant Network, London",
     jobTitle: "Blockchain Engineer Intern",
     description: [

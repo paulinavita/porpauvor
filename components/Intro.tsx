@@ -23,10 +23,12 @@ const Intro = () => {
             <MorphingText className="absolute" texts={texts} />
           </div>
           <div className="flex md:mt-8 sm:mt-8 lg:mt-0">
-            dev things; those that make me happy. sugar & 🍒 on top would be
-            productivity, blockchain, and bits of data analysis.
+            dev things + those that make me happy; years of fintech and
+            e-commerce experience. <br />
+            sugar & 🍒 on top would be productivity, blockchain, and bits of
+            data analysis.
           </div>
-          <div className="flex md:mt-8 sm:mt-1 lg:mt-0">
+          <div className="flex text-sm md:mt-8 sm:mt-1 lg:mt-0">
             site is in progress, i will add more of my dev works soon!
           </div>
           <span className="text-xs md:mt-3 sm:mt-1 lg:mt-0">

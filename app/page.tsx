@@ -15,7 +15,7 @@ export default function Home() {
         <Meteors />
         <Intro />
         <section className="flex gap-1">
-          {/* <Btn path="/photoblog" label="/photowalk" /> */}
+          <Btn path="/photoblog" label="/photowalk" />
           <Btn path="/epiclesis-shop" label="/tarot booking" />
           <Btn
             path="https://enluminari.vercel.app/"
