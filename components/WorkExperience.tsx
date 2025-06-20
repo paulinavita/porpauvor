@@ -14,8 +14,8 @@ interface WorkExperienceItem {
 
 const workExperienceData: WorkExperienceItem[] = [
   {
-    startDate: "2024",
-    endDate: "2024",
+    startDate: "2025",
+    endDate: "2025",
     companyName: "Tectagon Software House",
     jobTitle: "Sr Software Engineer",
     description: [
